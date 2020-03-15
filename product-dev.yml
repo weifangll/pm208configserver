@@ -1,4 +1,4 @@
-env: product-dev2
+env: product-dev3
 # eureka:
 #   client:
 #     service-url:
