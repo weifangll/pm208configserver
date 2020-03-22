@@ -1,2 +1,17 @@
 server:
   port: 8989
+zuul:
+  strip-prefix: false
+  routes: #路由规则
+#    myproduct: # 第一组规则;;;命名规范，一般情况下这个名字是要包装的名字
+#      serviceId: product
+#      path: /myproduct/**
+#    简单配置方式
+    product: /myproduct/**
+  ignored-patterns:
+#    - /myproduct/product/listForOrder
+#    - /product/product/listForOrder
+     - /**/product/listForOrder
+  sensitive-headers: #路由中支持cookie
+
+
